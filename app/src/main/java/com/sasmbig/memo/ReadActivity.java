@@ -1,15 +1,15 @@
-package memo.com.androidmemo;
+package com.sasmbig.memo;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 public class ReadActivity extends AppCompatActivity {
     String title,contents;
     TextView titleTv,contentsTv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

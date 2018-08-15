@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ReadActivity">
+    android:background="#f9f9f9"
+    tools:context="com.sasmbig.memo.ReadActivity">
 
     <TextView
         android:id="@+id/readTitle"

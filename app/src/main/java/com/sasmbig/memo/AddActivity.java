@@ -1,4 +1,4 @@
-package memo.com.androidmemo;
+package com.sasmbig.memo;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

@@ -1,4 +1,4 @@
-package memo.com.androidmemo;
+package com.sasmbig.memo;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
@@ -29,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
         fab = findViewById(R.id.mainFab);
         listview = findViewById(R.id.mainList);
         loadData();
+
+        adapter = new ListAdapter(items,this);
+        listview.setAdapter(adapter);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,8 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 String contents = data.getStringExtra("contents");
 
                 items.add(new Data(title,contents));
-                adapter = new ListAdapter(items,this);
-                listview.setAdapter(adapter);
+                adapter.notifyDataSetChanged();
                 saveData();
             }
         }

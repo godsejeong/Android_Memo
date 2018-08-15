@@ -1,4 +1,4 @@
-package memo.com.androidmemo;
+package com.sasmbig.memo;
 
 public class Data {
     String title;
